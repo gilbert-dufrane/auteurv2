@@ -1,3 +1,31 @@
+# Gilbert Dufrane - La Passion d'Ecrire
+
+[Project description]
+
+## Live Demo
+
+[Link if deployed]
+
+## Tech Stack
+
+- Frontend:
+- Backend:
+- Database:
+
+## Project Setup (**Astro Starter Kit** in second part of README)
+
+- Create the repo on github
+- Clone the repo on VS Code `git clone https://github.com...git`
+- At the root of the project install astro `npm create astro@latest .` (**use PowerShell not Git Bash**)
+- Answer questions in the terminal:
+  - `Where should we create your new project?` -> `.` to create at the root of the project
+  - `How would you like to start your new project?` -> Use minimal (empty) template
+  - `Install dependencies?` -> Yes
+  - `Initialize a new git repository?` -> No (we have an exiting repo)
+  - **NOTE** if there's a blocker when picking the path to create the project -> simply hit Enter with whatever folder is suggested (e.g. "squealing-star"), then move all the content created to the root at the end of this process `Move-Item -Path .\squealing-star\* -Destination . -Force` then delete empty folder `dir .\squealing-star`
+
+---
+
 # Astro Starter Kit: Minimal
 
 ```sh

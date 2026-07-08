@@ -32,41 +32,33 @@ body {
 
 .section-divider {
   width: 30%;
-  height: 1px;
+  height: 1.2px;
   background-color: var(--color-flash-orange);
   border: none;
   margin: 30px auto;
 }
 
 .btn-generic {
-  background-color: transparent;
   color: var(--color-text);
   font-family: var(--font-specific);
-  font-size: 0.9rem;
   text-transform: var(--font-specific-transform);
-  padding: 0.5rem 1rem;
+  font-size: 0.9rem;
+  padding: 0.8rem;
   border: var(--color-text) 1px solid;
-  border-radius: 0.3rem;
+  border-radius: 0.5rem;
   text-align: center;
-  display: block;
-  margin: 2rem auto;
-  min-width: 100px;
-  max-width: 200px;
   cursor: pointer;
   transition: color 0.2s;
 }
 
-.btn-generic:hover,
-.btn-generic:focus {
+.btn-generic:hover {
   background-color: var(--color-flash-orange);
   color: var(--color-bg);
   border-color: var(--color-flash-orange);
 }
 
 .btn-generic,
-.btn-generic:visited,
-.btn-generic:hover,
-.btn-generic:focus {
+.btn-generic:hover {
   text-decoration: none !important;
 }
 
@@ -237,7 +229,8 @@ body {
 .book-summary {
   font-size: 1rem;
   color: var(--color-text);
-  text-align: center;
+  text-align: left;
+  line-height: 1.5;
 }
 
 /* ---------------- Detail - Book Cards ---------------- */
@@ -337,12 +330,15 @@ body {
   resize: vertical;
 }
 
-/* ---------------- Media ---------------- */
-/* Mobile navbar collapse */
-@media (max-width: 991.98px) {
+/* ---------------- Media specific navbar for Mobile ---------------- */
+@media (max-width: 768px) {
   .navbar-collapse.show {
     margin-bottom: 1.5rem;
   }
+}
+
+/* ---------------- Media ---------------- */
+@media (min-width: 600px) {
 }
 
 /* Tablet and up */

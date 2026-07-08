@@ -1,0 +1,132 @@
+---
+// src/layouts/Layout.astro 
+const { title = "Gilbert Dufrane - Auteur" } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- SEO tags -->
+    <meta
+      name="description"
+      content="Site officiel de Gilbert Dufrane, auteur passionné. Découvrez ses ouvrages, son parcours, et sa passion pour l'écriture."
+    />
+    <meta
+      name="keywords"
+      content="auteur, écrivain, livres, romans, autoédition, littérature, Gilbert Dufrane, écrivain belge, ouvrages, publications, passion d'écrire"
+    />
+    <title>{title}</title>
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+
+    <!-- Styles  -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="/css/styles.css" />
+
+    <!-- Font Awesome CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+  <body class="d-flex flex-column min-vh-100">
+    <header>
+      <!-- Navbar or logo goes here -->
+      <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid px-4 px-lg-5">
+          <a class="navbar-brand" href="/">Gilbert Dufrane</a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="nav-icon"><i class="fas fa-bars"></i></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="/apropos">À propos</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/ouvrages">Ouvrages</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/actualite">Actualité</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <slot /> <!-- your content is injected here -->
+
+    <!-- Footer content -->
+    <footer class="site-footer mt-auto">
+      <div class="container-fluid px-4 px-lg-5 py-2 py-md-3">
+        <div class="row align-items-center">
+          <div class="col-8 col-sm-9">
+            <p class="footer-contact mt-2 mb-0">
+              Contact :
+              <a href="mailto:gilbert.dufrane@orange.fr"
+                >gilbert.dufrane@orange.fr</a
+              >
+            </p>
+            <p class="footer-credit mt-2 mb-0">
+              &copy; 2025 Gilbert Dufrane -
+              <a
+                href="https://github.com/SophieDufrane"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Créé par Sophie
+              </a>
+            </p>
+          </div>
+          <div
+            class="col-4 col-sm-3 d-flex flex-column align-items-end justify-content-end"
+          >
+            <a
+              href="https://www.facebook.com/guilberte"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Facebook"
+              class="footer-icon mb-2"
+            >
+              <i class="fab fa-facebook fa-lg"></i>
+            </a>
+            <a
+              href="https://www.instagram.com/gilbert_duf/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Instagram"
+              class="footer-icon"
+            >
+              <i class="fab fa-instagram fa-lg"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Bootstrap Bundle with Popper -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Custom JavaScript -->
+    <script src="/js/script.js"></script>
+  </body>
+</html>

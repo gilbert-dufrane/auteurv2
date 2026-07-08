@@ -22,7 +22,11 @@
   - `How would you like to start your new project?` -> Use minimal (empty) template
   - `Install dependencies?` -> Yes
   - `Initialize a new git repository?` -> No (we have an exiting repo)
-  - **NOTE** if there's a blocker when picking the path to create the project -> simply hit Enter with whatever folder is suggested (e.g. "squealing-star"), then move all the content created to the root at the end of this process `Move-Item -Path .\squealing-star\* -Destination . -Force` then delete empty folder `dir .\squealing-star`
+  - **NOTE** if there's a blocker when picking the path to create the project:
+    - Smply hit Enter with whatever folder is suggested (e.g. "squealing-star")
+    - Move all the content created to the root at the end of this process `Move-Item -Path .\squealing-star\* -Destination . -Force`
+    - Delete empty folder `dir .\squealing-star`
+    - In file package.json rename the "name" with correct file name used as root
 
 ---
 

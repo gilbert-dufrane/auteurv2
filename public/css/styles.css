@@ -1,0 +1,412 @@
+/* ---------------- Generic style ---------------- */
+@import url("https://fonts.googleapis.com/css2?family=Forum&family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap");
+:root {
+  /* Font stacks */
+  --font-body: "Forum", serif;
+  --font-specific: "IBM Plex Sans", sans-serif;
+  --font-specific-transform: uppercase;
+  --font-back-arrow: "Red Hat Display", sans-serif;
+
+  /* Brand palette 2025 */
+  --color-text: #282737; /* dark blue */
+  --color-flash-orange: #f75423; /* flash orange */
+  --color-bg: #f5f5dc; /* beige */
+  --color-sky: #a7c0ca; /* sky blue */
+  --color-champagne: #dacfbc; /* champagne */
+  --color-lgt-orange: #c7987d; /* light orange */
+  --color-moss: #dce4c9; /* moss green */
+  --color-lgt-grey: #c2beb5; /* light grey */
+}
+
+/* ---------------- General styles ---------------- */
+html,
+body {
+  height: 100%;
+}
+
+body {
+  font-family: var(--font-body);
+  color: var(--color-text);
+  background-color: var(--color-bg);
+}
+
+.section-divider {
+  width: 30%;
+  height: 1px;
+  background-color: var(--color-flash-orange);
+  border: none;
+  margin: 30px auto;
+}
+
+.btn-generic {
+  background-color: transparent;
+  color: var(--color-text);
+  font-family: var(--font-specific);
+  font-size: 0.9rem;
+  text-transform: var(--font-specific-transform);
+  padding: 0.5rem 1rem;
+  border: var(--color-text) 1px solid;
+  border-radius: 0.3rem;
+  text-align: center;
+  display: block;
+  margin: 2rem auto;
+  min-width: 100px;
+  max-width: 200px;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.btn-generic:hover,
+.btn-generic:focus {
+  background-color: var(--color-flash-orange);
+  color: var(--color-bg);
+  border-color: var(--color-flash-orange);
+}
+
+.btn-generic,
+.btn-generic:visited,
+.btn-generic:hover,
+.btn-generic:focus {
+  text-decoration: none !important;
+}
+
+/* ---------------- Navbar ---------------- */
+.navbar {
+  background: linear-gradient(
+    to bottom,
+    var(--color-bg) 80%,
+    rgba(218, 223, 227, 0) 100%
+  );
+  padding-top: 0.6rem;
+  padding-bottom: 1.2rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+}
+
+.navbar-brand,
+.nav-link,
+.nav-icon {
+  color: var(--color-text) !important;
+}
+
+.navbar-brand {
+  font-size: 1.8rem;
+}
+
+.nav-link {
+  font-size: 1.3rem;
+  padding: 0;
+}
+
+.navbar-toggler,
+.navbar-toggler:focus,
+.navbar-toggler:active {
+  border: none;
+  box-shadow: none;
+  outline: none;
+}
+
+/* ---------------- Footer ---------------- */
+.site-footer {
+  color: var(--color-text);
+  font-family: var(--font-specific);
+  border-top: var(--color-flash-orange) 1px solid;
+  font-size: 0.8rem;
+}
+
+.footer-contact a {
+  color: var(--color-flash-orange);
+  text-decoration: none;
+}
+
+.footer-credit {
+  opacity: 0.4;
+  font-size: 0.6rem;
+}
+
+.footer-credit a {
+  color: var(--color-text);
+  text-decoration: none;
+}
+
+.footer-credit a:hover {
+  color: var(--color-flash-orange);
+}
+
+.footer-icon {
+  color: var(--color-text);
+  transition: color 0.2s;
+  font-size: 1.2rem;
+}
+
+.footer-icon:hover {
+  color: var(--color-flash-orange);
+}
+
+/* ---------------- Landing Page ---------------- */
+.hero {
+  flex: 1 1 auto;
+  min-height: 0;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-media {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.hero-media .hero-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+.hero-title {
+  color: var(--color-text);
+  font-size: 3.2rem;
+  line-height: 1.4;
+  font-family: var(--font-body);
+  text-align: center;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.18);
+  margin: 0;
+  z-index: 2;
+}
+
+/* ---------------- Ouvrages - Book Cards ---------------- */
+.card-section {
+  padding: 6rem 2.5rem 2.5rem 2.5rem;
+}
+
+.book-card {
+  max-width: 450px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.book-cover {
+  max-width: 100%;
+  height: auto;
+  /* Optionally set a max-height for consistency */
+  max-height: 300px;
+  object-fit: cover;
+  box-shadow:
+    -12px 12px 18px -8px rgba(24, 59, 78, 0.18),
+    0 8px 16px -8px rgba(24, 59, 78, 0.12);
+  background: #fff;
+}
+
+.book-cover-link img {
+  border: none;
+  outline: none;
+}
+
+.book-cover-link .book-cover {
+  cursor: pointer;
+}
+
+.book-cover-link:hover .book-cover,
+.book-cover-link:focus .book-cover,
+.book-cover:hover {
+  transform: scale(1.1);
+  transition: transform 0.3s ease;
+  box-shadow: 0 4px 24px rgba(24, 59, 78, 0.18);
+  cursor: pointer;
+}
+
+.book-title {
+  font-size: 2rem;
+  font-family: var(--font-body);
+  color: var(--color-text);
+  text-align: center;
+}
+
+.book-summary {
+  font-size: 1rem;
+  color: var(--color-text);
+  text-align: center;
+}
+
+/* ---------------- Detail - Book Cards ---------------- */
+.detail-card-section {
+  padding: 6rem 2.5rem 2.5rem 2.5rem;
+}
+
+.book-cover-wrapper {
+  position: relative;
+  margin: 0 auto; /* center the wrapper itself */
+  display: block; /* not flex! */
+  max-width: 450px;
+}
+
+.book-detail-cover {
+  max-width: 130px;
+  width: 100%;
+  display: block;
+  margin: 0 auto;
+  box-shadow:
+    -12px 12px 18px -8px rgba(24, 59, 78, 0.18),
+    0 8px 16px -8px rgba(24, 59, 78, 0.12);
+  background: #fff;
+}
+
+.back-arrow {
+  position: absolute;
+  left: -0.5rem; /* bring arrow closer to image */
+  top: 50%;
+  transform: translateY(-50%);
+  font-family: var(--font-back-arrow);
+  font-size: 4rem;
+  color: var(--color-flash-orange);
+  text-decoration: none !important;
+}
+
+.back-arrow:hover,
+.back-arrow:focus {
+  color: var(--color-text);
+  text-decoration: none !important;
+}
+
+/* ---------------- About ---------------- */
+.about-section {
+  padding: 5rem 2rem 2rem 2rem;
+}
+
+.about-image {
+  max-width: 210px;
+  height: auto;
+}
+
+.about-title {
+  font-size: 2.3rem;
+  font-family: var(--font-body);
+  color: var(--color-text);
+}
+
+.about-quote {
+  text-align: center;
+  font-family: var(--font-specific);
+  font-size: 1.2rem;
+}
+
+/* ---------------- Actualites ---------------- */
+.actualite-section {
+  padding: 7rem 2rem 2rem 2rem;
+}
+
+.actualite-title {
+  font-size: 2.3rem;
+  font-family: var(--font-body);
+  color: var(--color-text);
+  margin-bottom: 2rem;
+}
+
+/* ---------------- Contact ---------------- */
+.contact-form {
+  width: 90%;
+  margin: 1.5rem auto;
+  display: block;
+}
+
+.contact-form input,
+.contact-form textarea {
+  background-color: #fff;
+  width: 100%;
+  padding: 0.5rem;
+  margin-bottom: 0.8rem;
+  border: 1px solid var(--color-text);
+  border-radius: 4px;
+  font-family: var(--font-specific);
+}
+
+.contact-form textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+/* ---------------- Media ---------------- */
+/* Mobile navbar collapse */
+@media (max-width: 991.98px) {
+  .navbar-collapse.show {
+    margin-bottom: 1.5rem;
+  }
+}
+
+/* Tablet and up */
+@media (min-width: 768px) {
+  .site-footer {
+    font-size: 1rem;
+  }
+
+  .footer-icon {
+    font-size: 1.5rem;
+  }
+
+  .hero-title {
+    font-size: 3.5rem;
+  }
+
+  .card-section {
+    padding: 7rem 2.5rem 2.5rem 2.5rem;
+  }
+
+  .detail-card-section {
+    padding: 7rem 3.5rem 2.5rem 3.5rem;
+  }
+
+  .book-card {
+    max-width: 75%;
+  }
+
+  .about-section {
+    padding-top: 10rem;
+  }
+
+  .about-image {
+    max-width: 250px;
+  }
+}
+
+/* Desktop and up */
+@media (min-width: 992px) {
+  .hero-title-break {
+    display: none;
+  }
+
+  .about-section {
+    padding-left: 8rem;
+    padding-right: 8rem;
+  }
+
+  .about-image {
+    max-width: 300px;
+  }
+
+  .card-section {
+    padding: 8rem 8rem 2.5rem 8rem;
+  }
+
+  .detail-card-section {
+    padding: 8rem 9rem 2.5rem 9rem;
+  }
+}
+
+/* Larger screens */
+@media (min-width: 1200px) {
+  .hero-title {
+    font-size: 4rem;
+  }
+}

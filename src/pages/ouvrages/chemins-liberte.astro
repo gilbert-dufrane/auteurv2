@@ -1,0 +1,17 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { ouvragesList } from '../../data/ouvrages';
+import BookDetailCard from '../../components/BookDetailCard.astro';
+
+const ouvrageDisplayed = ouvragesList.find((ouvrage) => ouvrage.slug === "chemins-liberte")
+---
+
+<Layout title={ouvrageDisplayed.title}>
+    <main class="flex-grow-1">
+      <section class="detail-card-section">
+        <div class="book-detail-card h-100">
+            <BookDetailCard title={ouvrageDisplayed.title} image={ouvrageDisplayed.image} summary={ouvrageDisplayed.summary} marketplaceLink={ouvrageDisplayed.marketplaceLink}/>
+        </div>
+      </section>
+    </main>
+</Layout>

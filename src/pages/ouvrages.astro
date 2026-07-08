@@ -1,10 +1,17 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import { ouvragesList } from '../data/ouvrages';
+import BookCard from '../components/BookCard.astro';
 ---
 
-<Layout title="Gilbert Dufrane - Auteur">
+<Layout title="Gilbert Dufrane - Ouvrages">
   <main class="flex-grow-1">
-    <!-- contenu de la page -->
-
+    <section class="card-section">
+      <div class="row">
+        {ouvragesList.map((ouvrage) => (
+          <BookCard slug={ouvrage.slug} title={ouvrage.title} image={ouvrage.image} summary={ouvrage.summary} />
+        ))}
+      </div>
+    </section>
   </main>
 </Layout>

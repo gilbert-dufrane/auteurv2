@@ -1,0 +1,30 @@
+---
+const { slug, title, image, summary } = Astro.props;
+
+function truncateText(text, maxLength) {
+    if (text.length <= maxLength) {
+        return text
+    } else {
+        let textMaxLength = text.slice(0, maxLength);
+        let lastWordEnd = textMaxLength.lastIndexOf(" ");
+        let textTruncated = textMaxLength.slice(0, lastWordEnd)
+        return `${textTruncated}...`
+    }
+}
+
+const truncatedSummary = truncateText(summary, 100)
+---
+
+<div class="col-12 col-md-6 mb-4">
+    <div class="book-card h-100">
+        <a href={`/ouvrages/${slug}`} class="book-cover-link"
+            ><img
+                src= {image}
+                alt= {title}
+                class="book-cover mb-3"
+        /></a>
+        <h2 class="book-title mb-2">{title}</h2>
+        <p class="book-summary mb-3">{truncatedSummary}</p>
+        <hr class="section-divider align-items-center" />
+    </div>
+</div>

@@ -5,20 +5,20 @@ import Layout from '../layouts/Layout.astro';
 <Layout title="Gilbert Dufrane - Auteur">
   <main class="flex-grow-1 d-flex flex-column p-0">
     <!-- contenu de la page -->
-	<section class="hero">
-        <picture class="hero-media">
-          <source srcset="images/hero_desktop.jpg" media="(min-width: 992px)" />
-          <source srcset="images/hero_tablet.jpg" media="(min-width: 768px)" />
-          <img
+	  <section class="hero">
+      <picture class="hero-media">
+        <source srcset="/images/hero_desktop.jpg" media="(min-width: 992px)" />
+        <source srcset="/images/hero_tablet.jpg" media="(min-width: 768px)" />
+        <img
             src="images/hero_mobile.jpg"
             alt="Livres flous"
             class="img-fluid hero-img"
-          />
-        </picture>
-        <h1 class="hero-title">
+        />
+      </picture>
+      <h1 class="hero-title">
           La Passion<br class="hero-title-break" />
           d'Écrire&nbsp;!
-        </h1>
-      </section>
+      </h1>
+    </section>
   </main>
 </Layout>

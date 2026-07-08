@@ -1,0 +1,40 @@
+---
+const { title, image, summary, marketplaceLink } = Astro.props;
+---
+
+<div class="row align-items-start">
+    <!-- Left column: Cover + Arrow -->
+    <div class="col-12 col-md-5 text-center mb-4 mb-md-0">
+        <div class="book-cover-wrapper mb-3 position-relative">
+            <img
+                src={image}
+                alt={title}
+                class="book-detail-cover"
+            />
+            <a
+                href="/ouvrages"
+                class="btn btn-link p-0 back-arrow me-3"
+                aria-label="Retour aux ouvrages"
+                tabindex="0"
+            >
+                &lt;
+            </a>
+        </div>
+    </div>
+
+    <!-- Right column: Title + Divider + Summary + Button -->
+    <div class="col-12 col-md-7 d-flex flex-column align-items-start">
+        <h2 class="book-title mb-2">{title}</h2>
+        <hr class="section-divider mt-4 align-self-start" />
+        <p class="book-summary mb-3">{summary}</p>
+        {marketplaceLink && (
+            <a
+            href={marketplaceLink}
+            class="btn-generic"
+            target="_blank"
+            rel="noopener noreferrer"
+            >Acheter sur Amazon
+            </a> 
+        )} 
+    </div>
+</div>

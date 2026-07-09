@@ -15,16 +15,16 @@ function truncateText(text, maxLength) {
 const truncatedSummary = truncateText(summary, 100)
 ---
 
-<div class="col-12 col-md-6 mb-4">
+<div class="col-12 col-md-6 col-xxl-4 mb-4">
     <div class="book-card h-100">
         <a href={`/ouvrages/${slug}`} class="book-cover-link"
             ><img
                 src= {image}
                 alt= {title}
-                class="book-cover mb-3"
+                class="book-cover mb-5"
         /></a>
         <h2 class="book-title mb-2">{title}</h2>
         <p class="book-summary mb-2">{truncatedSummary}</p>
-        <hr class="section-divider align-items-center" />
+        <hr class="section-divider" />
     </div>
 </div>

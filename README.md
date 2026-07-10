@@ -1,6 +1,12 @@
 # Gilbert Dufrane - La Passion d'Ecrire
 
-[Project description]
+## Project Description
+
+This project was originally built as a static website using plain HTML, CSS, and JavaScript. As the site grew to 10+ pages, it became clear that the header and footer markup (along with other shared elements) were being duplicated across every single page which was a maintenance risk, since any update meant editing multiple files by hand.
+
+To apply the **DRY (Don't Repeat Yourself)** principle, the project was duplicated to **Astro**. Using Astro's Layout and Components system, shared elements (header, footer, navigation, book cards) are now defined once and reused everywhere, significantly reducing duplication and the risk of inconsistencies.
+
+Content (books first then applied to the news "Actualites" page) is also managed through structured data files (arrays of objects in JavaScript) rather than being hardcoded into each page. This makes the site easier to maintain and update: adding, editing, or removing an item only requires a change in one place, and the corresponding pages are generated automatically.
 
 ## Live Demo
 
@@ -8,9 +14,9 @@
 
 ## Tech Stack
 
-- Frontend:
-- Backend:
-- Database:
+- Astro
+- Bootstrap
+- Font Awesome
 
 ## Project Setup (**Astro Starter Kit** in second part of README)
 

@@ -8,10 +8,8 @@ const ouvrageDisplayed = ouvragesList.find((ouvrage) => ouvrage.slug === "imagin
 
 <Layout title={ouvrageDisplayed.title}>
     <main class="flex-grow-1">
-      <section class="detail-card-section">
-        <div class="book-detail-card h-100">
-            <BookDetailCard title={ouvrageDisplayed.title} image={ouvrageDisplayed.image} summary={ouvrageDisplayed.summary} marketplaceLink={ouvrageDisplayed.marketplaceLink}/>
-        </div>
+      <section class="detail-card-section row align-items-center">
+        <BookDetailCard title={ouvrageDisplayed.title} image={ouvrageDisplayed.image} summary={ouvrageDisplayed.summary} marketplaceLink={ouvrageDisplayed.marketplaceLink}/>
       </section>
     </main>
 </Layout>

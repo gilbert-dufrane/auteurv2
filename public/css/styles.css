@@ -217,18 +217,23 @@ body {
   cursor: pointer;
 }
 
-.book-title {
+.book-title,
+.book-detail-title {
   font-size: 2rem;
   font-family: var(--font-body);
   color: var(--color-text);
   text-align: center;
 }
 
-.book-summary {
+.book-summary,
+.book-detail-summary {
   font-size: 1rem;
   color: var(--color-text);
-  text-align: left;
   line-height: 1.5;
+  text-align: left;
+}
+
+.book-summary {
   max-width: min(90%, 50ch);
 }
 
@@ -242,16 +247,12 @@ body {
 
 .book-cover-wrapper {
   position: relative;
-  margin: 0 auto; /* center the wrapper itself */
-  display: block; /* not flex! */
-  max-width: 450px;
+  display: block;
 }
 
-.book-detail-cover {
-  max-width: 130px;
-  width: 100%;
-  display: block;
-  margin: 0 auto;
+.book-detail-img {
+  max-width: min(60%, 300px);
+  height: auto;
   box-shadow:
     -12px 12px 18px -8px rgba(24, 59, 78, 0.18),
     0 8px 16px -8px rgba(24, 59, 78, 0.12);
@@ -260,7 +261,7 @@ body {
 
 .back-arrow {
   position: absolute;
-  left: -0.5rem; /* bring arrow closer to image */
+  left: 1rem; /* bring arrow closer to image */
   top: 50%;
   transform: translateY(-50%);
   font-family: var(--font-back-arrow);
@@ -272,7 +273,6 @@ body {
 .back-arrow:hover,
 .back-arrow:focus {
   color: var(--color-text);
-  text-decoration: none !important;
 }
 
 /* ---------------- About ---------------- */
@@ -345,16 +345,15 @@ body {
     font-size: 3.5rem;
   }
 
-  .card-section {
-    padding: 7rem 2.5rem 2.5rem 2.5rem;
-  }
-
-  .detail-card-section {
-    padding: 7rem 3.5rem 2.5rem 3.5rem;
-  }
-
-  .about-section {
+  .card-section,
+  .detail-card-section,
+  .about-section,
+  .actualite-section {
     padding-top: 10rem;
+  }
+
+  .book-detail-title {
+    text-align: left;
   }
 
   .about-title,
@@ -372,14 +371,6 @@ body {
 @media (min-width: 992px) {
   .hero-title-break {
     display: none;
-  }
-
-  .card-section {
-    padding: 8rem 8rem 2.5rem 8rem;
-  }
-
-  .detail-card-section {
-    padding: 8rem 9rem 2.5rem 9rem;
   }
 }
 

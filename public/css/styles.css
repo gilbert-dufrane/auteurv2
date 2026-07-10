@@ -303,7 +303,7 @@ body {
 
 /* ---------------- Actualites ---------------- */
 .actualite-section {
-  padding: 6rem 2.5rem 2.5rem 2.5rem;
+  padding: 10rem 2.5rem 2.5rem 2.5rem;
   max-width: 1200px;
   margin-left: auto;
   margin-right: auto;
@@ -313,6 +313,13 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.img-actualite {
+  width: 95%;
+  height: 300px;
+  object-fit: cover;
+  margin-top: 1.5rem;
 }
 
 /* ---------------- Media specific navbar for Mobile ---------------- */
@@ -353,10 +360,6 @@ body {
   .about-title,
   .about-quote {
     text-align: left;
-  }
-
-  .actualite-section {
-    padding-top: 10rem;
   }
 
   .section-divider-left {

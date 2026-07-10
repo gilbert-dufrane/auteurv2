@@ -9,7 +9,7 @@ import ActualiteCard from '../components/ActualiteCard.astro';
     <section class="actualite-section">
       <div class="row g-5">
         {actualiteList.map((actualite) => (
-          <ActualiteCard slug={actualite.slug} title={actualite.title} content={actualite.content} />
+          <ActualiteCard slug={actualite.slug} title={actualite.title} content={actualite.content} photoActualite={actualite.photoActualite}/>
         ))}
       </div>
     </section>

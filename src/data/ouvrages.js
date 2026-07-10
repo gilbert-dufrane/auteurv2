@@ -46,11 +46,13 @@ export const actualiteList = [
     title: "Juin 2025 : sortie d’un nouvel ouvrage",
     content:
       "20 contes, légendes et autres nouvelles... 150 pages pour découvrir une autre dimension du monde... pour sourire... s’interroger... se faire PEUR ! Cet ouvrage m’a été inspiré par mon dernier séjour en Irlande en novembre 2024. Il règne dans ce pays une ambiance favorisant le rêve et les contes. Le monde irlandais est peuplé de petits personnages soit farceurs soit franchement hostiles au genre humain. Tout est prétexte à raconter des his- toires. Ca tombe bien... j’aime les histoires. Alors une fois de retour à la maison je me suis mis devant l’ordinateur et les premières nouvelles ont tout de suite pris corps. Ensuite, bien sûr, l’imagination a continué le travail ! Il suffit parfois d’un rien pour que s’enclenche le mécanisme et je suis le premier surpris du chemin que l‘imagination m’entraîne à suivre !",
+    photoActualite: "/images/ambiance1.jpg",
   },
   {
     slug: "lorem-ipsum",
     title: "Lorem ipsum dolor sit amet",
     content:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean dolor quam, semper viverra nisi sit amet, faucibus interdum ante. Curabitur ornare orci metus, in tempor metus sollicitudin in. Donec tempor ultrices quam eu fermentum. In viverra tortor eu diam scelerisque, sed dapibus neque porttitor. Donec ac finibus tortor. Donec in diam fermentum, eleifend sem efficitur, porta quam. Pellentesque sit amet sapien massa. Aenean ex neque, finibus finibus dapibus non, cursus vitae ex. Nullam mi tellus, hendrerit in commodo vel, tristique sit amet nunc. Vivamus ut nisi enim. Morbi in tortor vitae est consectetur condimentum. Suspendisse sollicitudin elit sed lectus auctor suscipit. Suspendisse vitae interdum erat, in tempor turpis. Fusce suscipit enim magna, eget interdum lorem fringilla non.",
+    photoActualite: "/images/ambiance2.jpg",
   },
 ];

@@ -1,35 +1,17 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import { actualiteList } from '../data/ouvrages';
+import ActualiteCard from '../components/ActualiteCard.astro';
 ---
 
 <Layout title="Gilbert Dufrane - Actualité">
   <main class="flex-grow-1">
-    <!-- contenu de la page -->
-      <section class="actualite-section row align-items-start">
-        <!-- Left column: Image -->
-        <div class="col-12 col-md-5 text-center"></div>
-        <!-- Right column: Text content -->
-        <div class="col-12 col-md-7">
-          <h2 class="actualite-title text-start">Les Actualité</h2>
-          <h3>Juin 2025 : sortie d’un nouvel ouvrage</h3>
-          <hr class="section-divider align-items-center" />
-          <h4>J’ai quand même pas rêvé, non ?</h4>
-          <p>
-            20 contes, légendes et autres nouvelles... 150 pages pour découvrir
-            une autre dimension du monde... pour sourire... s’interroger... se
-            faire PEUR ! Cet ouvrage m’a été inspiré par mon dernier séjour en
-            Irlande en novembre 2024. Il règne dans ce pays une ambiance
-            favorisant le rêve et les contes. Le monde irlandais est peuplé de
-            petits person- nages soit farceurs soit franchement hostiles au
-            genre humain. Tout est prétexte à raconter des his- toires. Ca tombe
-            bien... j’aime les histoires. Alors une fois de retour à la maison
-            je me suis mis devant l’ordinateur et les premières nouvelles ont
-            tout de suite pris corps. Ensuite, bien sûr, l’imagination a
-            continué le travail ! Il suffit parfois d’un rien pour que
-            s’enclenche le mécanisme et je suis le premier surpris du chemin que
-            l‘imagination m’entraîne à suivre !
-          </p>
-        </div>
-      </section>
+    <section class="actualite-section">
+      <div class="row g-5">
+        {actualiteList.map((actualite) => (
+          <ActualiteCard slug={actualite.slug} title={actualite.title} content={actualite.content} />
+        ))}
+      </div>
+    </section>
   </main>
 </Layout>

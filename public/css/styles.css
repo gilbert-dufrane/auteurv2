@@ -309,11 +309,10 @@ body {
   margin-right: auto;
 }
 
-.actualite-title {
-  font-size: 2.3rem;
-  font-family: var(--font-body);
-  color: var(--color-text);
-  margin-bottom: 2rem;
+.actualite-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 /* ---------------- Media specific navbar for Mobile ---------------- */
@@ -354,6 +353,10 @@ body {
   .about-title,
   .about-quote {
     text-align: left;
+  }
+
+  .actualite-section {
+    padding-top: 10rem;
   }
 
   .section-divider-left {

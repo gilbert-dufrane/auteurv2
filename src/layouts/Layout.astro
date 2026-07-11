@@ -40,7 +40,7 @@ const { title = "Gilbert Dufrane - Auteur" } = Astro.props;
       <!-- Navbar or logo goes here -->
       <nav class="navbar navbar-expand-md">
         <div class="container-fluid px-4 px-lg-5">
-          <a class="navbar-brand" href="/">Gilbert Dufrane</a>
+          <a class="navbar-brand navbar-link-specific" href="/">Gilbert Dufrane</a>
           <button
             class="navbar-toggler"
             type="button"
@@ -56,13 +56,13 @@ const { title = "Gilbert Dufrane - Auteur" } = Astro.props;
           <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ms-auto">
               <li class="nav-item">
-                <a class="nav-link" href="/apropos">À propos</a>
+                <a class="nav-link navbar-link-specific" href="/apropos">À propos</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="/ouvrages">Ouvrages</a>
+                <a class="nav-link navbar-link-specific" href="/ouvrages">Ouvrages</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="/actualite">Actualité</a>
+                <a class="nav-link navbar-link-specific" href="/actualite">Actualité</a>
               </li>
             </ul>
           </div>

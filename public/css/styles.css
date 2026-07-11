@@ -30,6 +30,7 @@ body {
   background-color: var(--color-bg);
 }
 
+/* ---------------- Shared / Utilities ---------------- */
 .section-divider {
   width: 40%;
   height: 1px;
@@ -39,6 +40,12 @@ body {
   margin: 30px auto;
 }
 
+.footer-credit a:hover,
+.navbar-link-specific:hover {
+  color: var(--color-flash-orange);
+}
+
+/* ---------------- Button ---------------- */
 .btn-generic {
   color: var(--color-text);
   font-family: var(--font-specific);
@@ -82,7 +89,7 @@ body {
 .navbar-brand,
 .nav-link,
 .nav-icon {
-  color: var(--color-text) !important;
+  color: var(--color-text);
 }
 
 .navbar-brand {
@@ -123,10 +130,6 @@ body {
 .footer-credit a {
   color: var(--color-text);
   text-decoration: none;
-}
-
-.footer-credit a:hover {
-  color: var(--color-flash-orange);
 }
 
 .footer-icon {
